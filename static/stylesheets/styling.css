@@ -243,3 +243,27 @@
     <script src="script.js"> </script>
 </body>
 </html>
+
+
+
+<!-- ONE WAY FOR IT TO WORK -->
+<!-- <div class = "about">
+   <button type="button" onclick="openAboutPopup()">
+       <i class="fas fa-user" style="color: #CC0000;"></i>
+       <span>About</span>
+   </button>
+   <div id="aboutPopup" class="popup">
+   </div>
+</div>
+
+<script>
+   function openAboutPopup() {
+       fetch('about.html')
+         .then(response => response.text())
+         .then(content => {
+           document.getElementById('aboutPopup').innerHTML = content;
+           document.getElementById('aboutPopup').style.display = 'block';
+         });
+     }
+     
+</script> -->

@@ -1,32 +1,366 @@
-body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url('bu-wallpaper.jpeg');
-    background-size: cover;
-    height: 100vh;
-  }
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Chonburi&family=Italiana&family=Julius+Sans+One&family=Orbitron:wght@700&display=swap');
 
-.andrea {
-    position: absolute;
-    top: 30px;
-    left: 100px;
-    width: 100%;
-    height: 70%;   
-    display: flex;   
-}
+    /* encompasses everything in the home page  */
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url('../images/bu.jpeg');
+        background-size: cover;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
 
-.contact {
-    position: relative;
-    padding-top: 30px; /* Adjust the padding-top value to create space for the icon */
-    margin: 0;
-    width: 50px;
-  }
-  
-.contact i {
-    position: relative;
-    top: 20px; /* Adjust the top value to position the icon vertically */
-    left: 50px; /* Adjust the left value to position the icon horizontally */
-    color: #e50606;
-    font-size: 24px; /* Adjust the font-size of the icon */
-  }
+     /* ------------------- LEFT ANDREA SECTION ------------------- */
+    .container {
+        position: relative;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+
+    /* {% comment %} -------------- PICTURE --------------- {% endcomment %} */
+      
+    .andrea {
+        position: relative;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        /* top: 30px;
+        left: 30px; */
+        height: 70%;   
+        display: flex;  
+        justify-content: center;
+        z-index: 2; 
+    }
+
+    /* {% comment %} ------------------- TEXT TYPING ANIMATION -------------------- {% endcomment %} */
+    .description {
+        display: flex;
+        z-index: 2;
+        position: absolute;
+        /* top: 570px;
+        left: -30px; */
+        width: 100%; 
+        font-family: 'Julius Sans One', sans-serif;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+
+    .description .list {
+        text-align: center;
+        margin-left: 50px;
+        line-height: 30px;
+        height: 30px;
+        overflow: hidden;
+    }
+
+    .list li {
+        list-style: none;
+        color: black;
+        font-size: 20px;
+        font-weight: 500;
+        position: relative;
+        top: 0;
+        animation: slide 9s steps(3) infinite;
+    }
+
+    @keyframes slide{
+        100%{
+            top: -90px; 
+            /* {% comment %} might have to play with this value  {% endcomment %} */
+        }
+    }
+
+    .list li {
+        position: relative;
+    }
+
+    .list li::after{
+        content: " ";
+        position: absolute;
+        left: 0;
+        height: 37px;
+        width: 100%;
+        background-color: #fafafa;
+        border-left: 2px solid black;
+        animation: typing 3s steps(11) infinite;
+    }
+
+    @keyframes typing{
+        40%,
+        60%{
+            left: calc(100% + 30px);
+        }
+        100%{
+            left: 0;
+        }
+    }
+
+    /* {% comment %} ------------ CONTACT LINKS ------------- {% endcomment %} */
+    .links{
+      position: relative;
+      display: flex;
+      justify-content: space-evenly;
+      justify-items: row;
+      height: 100px;
+      margin-bottom: 30px;
+      font-size: 24px;
+      z-index: 3;
+      top: 75px;
+    }
+
+    /* .linkedin {
+        position: relative;
+        padding-top: 30px; 
+        margin: 0;
+        width: 50px;
+      }
+      
+    .linkedin i {
+        position: relative;
+        top: 370px;
+        left: -30px; 
+        font-size: 24px; 
+        z-index: 3;
+      }
+
+    .github {
+        position: relative;
+        padding-top: 30px; 
+        margin: 0;
+        width: 50px;
+      }
+
+    .github i {
+        position: relative;
+        top: 370px;
+        left: -565px; 
+        font-size: 24px; 
+        z-index: 3;
+      }
+
+    .email {
+        position: relative;
+        padding-top: 30px; 
+        margin: 0;
+        width: 50px;
+      }
+    
+    .email i{
+        position: relative;
+        top: 370px;
+        left: -485px; 
+        font-size: 24px; 
+        z-index: 3;
+    }
+
+    .phone {
+        position: relative;
+        padding-top: 30px; 
+        margin: 0;
+        width: 50px;
+      }
+    
+    .phone i{
+        position: relative;
+        top: 370px;
+        left: -600px; 
+        font-size: 24px; 
+        z-index: 3;
+    } */
+
+    /* {% comment %} ------------------- ABOUT SECTION ------------------- {% endcomment %} */
+
+    /* buttons */
+    .info{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 100vh;
+        font-size: 24px;
+        z-index: 3;
+        left: 40%;
+        text-align: center;
+    }
+
+    button {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100px;
+      height: 100px;
+      border: none;
+      background-color: #fafafa;
+      cursor: pointer;
+      border: 5px solid #690202;
+    }
+
+    button i {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+    
+    button span {
+      font-size: 14px;
+      font-weight: 1200;
+      font-family:'Julius Sans One', sans-serif;
+    }
+
+    /* about button */
+
+    #popupContainer {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+      transition: width 0.3s ease, height 0.3s ease;
+    }
+    
+    #popupContent {
+      background-color: #ffffff;
+      width: 0;
+      height: 0;
+      transition: width 0.3s ease, height 0.3s ease;
+    }
+
+    
+    /* ------------------- ABOUT POPUP -------------------- */
+    .about {
+      position: relative;
+    }
+    
+    .popup {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      top: 7%;
+      left: 66.7%; 
+      /* 66.56 */
+      width: 850px;
+      height: 690px;
+      transform: translateX(-100%);
+      background-color: #fafafa;
+      border: 5px solid #690202;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      animation: slideIn 0.5s forwards;
+    }
+
+    @keyframes slideIn {
+      0%{
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    @keyframes slideOutRight {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(100%);
+      }
+    }
+
+    /* --------------------- EXPERIENCE POPUP ----------------------- */
+
+    .experience {
+      position: relative;
+    }
+    
+    .epopup {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      top: 7%;
+      left: 66.7%; 
+      /* 66.56 */
+      width: 850px;
+      height: 690px;
+      transform: translateX(-100%);
+      background-color: #fafafa;
+      border: 5px solid #690202;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      animation: slideIn 0.5s forwards;
+    }
+
+    @keyframes slideIn {
+      0%{
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    @keyframes slideOutRight {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(100%);
+      }
+    }
+
+    /* --------------------- RESUME POPUP ----------------------- */
+
+    .resume {
+      position: relative;
+    }
+    
+    .rpopup {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      top: 7%;
+      left: 66.7%; 
+      /* 66.56 */
+      width: 850px;
+      height: 690px;
+      transform: translateX(-100%);
+      background-color: #fafafa;
+      border: 5px solid #690202;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      animation: slideIn 0.5s forwards;
+    }
+
+    @keyframes slideIn {
+      0%{
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-50%);
+      }
+    }
+
+    @keyframes slideOutRight {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(100%);
+      }
+    }
+    /* .modal{
+      padding: 1em;
+      max-width: 50ch;
+    }
+
+    .modal > * {
+        margin: 0 0 0.25em 0;
+    } */
+    
