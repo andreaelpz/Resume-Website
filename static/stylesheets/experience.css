@@ -11,3 +11,140 @@
 .close i {
     margin-right: 5px;
   }
+
+/* --------- WORK EXPERIENCE SECTION ---------- */
+.we{
+      font-family: 'Julius Sans One', sans-serif;
+      font-weight: bold;
+      font-size: 40px;
+      text-align:center;
+      margin: 20px auto;
+      margin-top: 70px;
+      max-width: 600px;
+  }
+
+/* --------- PROJECT MANAGEMENT SECTION ---------- */
+.projman {
+  margin-bottom: 20px;
+}
+
+.pm {
+  font-family: 'Julius Sans One', sans-serif;
+  font-weight: bold;
+  font-size: 80px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center; 
+}
+
+.stack{
+  display: flex;
+  flex-direction: column;
+}
+
+.pm::before,
+  .pm::after {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: #690202; 
+      margin-top: 10px; 
+  }
+
+.pmw{
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.ex{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.box{
+  width: 300px;
+  height: 300px;
+  background: #fafafa;
+  align-items: center;
+  /* might have to delete align-items */
+  margin: 20px;
+  perspective: 1000px;
+  cursor: pointer;
+  }
+
+.content {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+.box:hover .content{
+  transform: rotateY(-180deg);
+}
+
+.front, .back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.front{
+  transform: rotateY(0);
+  border: 7.5px solid #CC0000;
+}
+
+.back{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  transform: rotateY(-180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 7.5px solid #CC0000;
+}
+
+.boxTitle{
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-family: "Julius Sans One", sans-serif;
+  font-weight: bold;
+  margin: 10px;
+}
+
+/* --------- SWE SECTION ---------- */
+.swe{
+  margin-bottom: 20px;
+}
+
+.sw{
+  font-size: 15px;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+/* --------- OTHER SECTION ---------- */
+
+/* --------- PROJECTS SECTION ---------- */
+
+.projects{
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    text-align:center;
+    margin: 20px auto;
+    margin-top: 70px;
+    max-width: 600px;
+}

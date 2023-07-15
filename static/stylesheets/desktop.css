@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Chonburi&family=Italiana&family=Julius+Sans+One&family=Orbitron:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Chonburi&family=Cinzel:wght@500&family=Italiana&family=Julius+Sans+One&family=Montserrat:wght@100;200&family=Orbitron:wght@700&family=Poppins:wght@100;200&family=Raleway:wght@100&display=swap');
+
 
     /* encompasses everything in the home page  */
     body {
@@ -115,65 +117,43 @@
       top: 75px;
     }
 
-    /* .linkedin {
-        position: relative;
-        padding-top: 30px; 
-        margin: 0;
-        width: 50px;
-      }
-      
-    .linkedin i {
-        position: relative;
-        top: 370px;
-        left: -30px; 
-        font-size: 24px; 
-        z-index: 3;
-      }
+    #pn{
+      position: absolute;
+      left:320%;
+      bottom: calc(100% + 10px);
+      transform: translateX(-50%);
+      background-color: #fafafa;
+      border: #CC0000 4px solid;
+      color: black;
+      white-space: nowrap;
+      padding: 5px 10px;
+      border-radius: 5px;
+      font-family: "Julius Sans One", sans-serif;
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 0.5s ease;
+    }
 
-    .github {
-        position: relative;
-        padding-top: 30px; 
-        margin: 0;
-        width: 50px;
-      }
-
-    .github i {
-        position: relative;
-        top: 370px;
-        left: -565px; 
-        font-size: 24px; 
-        z-index: 3;
-      }
-
-    .email {
-        position: relative;
-        padding-top: 30px; 
-        margin: 0;
-        width: 50px;
-      }
-    
-    .email i{
-        position: relative;
-        top: 370px;
-        left: -485px; 
-        font-size: 24px; 
-        z-index: 3;
+    #pn::before{
+      content:"";
+      position: absolute;
+      left: 2px;
+      top: 100%;
+      transform: translateX(-90%) rotate(90%);
+      border: 9px solid transparent;
+      border-top-color: #CC0000
     }
 
     .phone {
-        position: relative;
-        padding-top: 30px; 
-        margin: 0;
-        width: 50px;
-      }
-    
-    .phone i{
-        position: relative;
-        top: 370px;
-        left: -600px; 
-        font-size: 24px; 
-        z-index: 3;
-    } */
+      position: relative;
+      display: inline-block;
+    }
+
+    .phone i:hover + #pn{
+      bottom:calc(100% + 7px);
+      visibility: visible;
+      opacity: 1;
+    }
 
     /* {% comment %} ------------------- ABOUT SECTION ------------------- {% endcomment %} */
 
@@ -195,8 +175,8 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      width: 100px;
-      height: 100px;
+      width: 150px;
+      height: 150px;
       border: none;
       background-color: #fafafa;
       cursor: pointer;
@@ -209,7 +189,7 @@
     }
     
     button span {
-      font-size: 14px;
+      font-size: 20px;
       font-weight: 1200;
       font-family:'Julius Sans One', sans-serif;
     }
@@ -254,6 +234,7 @@
       padding: 20px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
       animation: slideIn 0.5s forwards;
+      overflow: auto;
     }
 
     @keyframes slideIn {
@@ -295,6 +276,7 @@
       padding: 20px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
       animation: slideIn 0.5s forwards;
+      overflow: auto;
     }
 
     @keyframes slideIn {
@@ -336,6 +318,7 @@
       padding: 20px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
       animation: slideIn 0.5s forwards;
+      overflow: auto;
     }
 
     @keyframes slideIn {

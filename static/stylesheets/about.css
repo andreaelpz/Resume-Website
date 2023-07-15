@@ -1,3 +1,5 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Chonburi&family=Cinzel:wght@500&family=Italiana&family=Julius+Sans+One&family=Montserrat:wght@100;200&family=Orbitron:wght@700&family=Poppins:wght@100;200&family=Raleway:wght@100&display=swap');
 .close {
     position: absolute;
     top: -23px;
@@ -11,3 +13,123 @@
 .close i {
     margin-right: 5px;
   }
+
+  /* --------- ABOUT SECTION ---------- */
+
+.about {
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    text-align:center;
+    margin: 20px auto;
+    margin-top: 70px;
+    max-width: 600px;
+}
+
+.par{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+  /* --------- EDUCATION SECTION ---------- */
+
+.education {
+    margin-bottom: 20px;
+}
+
+.ed {
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: bold;
+    font-size: 80px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center; 
+}
+
+.stack{
+    display: flex;
+    flex-direction: column;
+}
+
+.ed::before,
+    .ed::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #690202; 
+        margin-top: 10px; 
+    }
+
+.edw{
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.deg{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+/* --------- SKILLS SECTION ---------- */
+
+.skill {
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: bold;
+    font-size: 75px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center; 
+}
+
+.skill::before,
+    .skill::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2px;
+        background-color: #690202; 
+        margin-top: 30px; 
+    }
+
+.sdw{
+        font-size: 15px;
+        font-weight: 700;
+        margin-top: 5px;
+    }
+    
+
+.skills{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+    justify-content: space-around;
+}
+
+.tech {
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.tlist{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+}
+
+.soft {
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.slist{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+}
