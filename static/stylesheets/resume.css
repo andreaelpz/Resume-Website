@@ -11,3 +11,39 @@
 .close i {
     margin-right: 5px;
   }
+
+.resume {
+    font-family: 'Julius Sans One', sans-serif;
+    font-weight: bold;
+    font-size: 40px;
+    text-align:center;
+    margin: 20px auto;
+    margin-top: 70px;
+    max-width: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rb{
+  position: relative;
+  height: 140%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.style{
+  height: 70px;
+  width: 200px;
+}
+
+.inside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px auto;
+  font-size: 10px;
+}

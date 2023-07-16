@@ -111,25 +111,133 @@
 .tech {
     font-family: 'Julius Sans One', sans-serif;
     font-weight: bold;
-    font-size: 30px;
     margin-bottom: 20px;
 }
 
-.tlist{
+.tlist h2{
     font-family: 'Poppins', sans-serif;
-    font-weight: 900;
-    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-top: 40px;
+    margin-bottom: 5px;
+    font-size: 15px;
+    text-align: left;
 }
+
+.progress-bar{
+    background: #fafafa;
+    width: 100%;
+    height: 10px;
+}
+
+.progress-bar div{
+    height: 10px;
+    width: 0%;
+    background: #CC0000;
+}
+
+.progress-bar div span{
+    height: 30px;
+    width: 30px;
+    font-size: 12px;
+    border: 1px solid #fafafa;
+    background: #fafafa;
+    float: right;
+    margin-top: -10px;
+    margin-right: -20px;
+    color: black;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.python{
+    animation: python 1s linear forwards;
+}
+
+.java{
+    animation: java 1s linear forwards;
+}
+
+.c{
+    animation: c 1s linear forwards;
+}
+
+.hc{
+    animation: hc 1s linear forwards;
+}
+
+.js{
+    animation: js 1s linear forwards;
+}
+
+.sql{
+    animation: sql 1s linear forwards;
+}
+
+@keyframes python{
+    100%{
+        width: 90%;
+    }
+}
+
+@keyframes java{
+    100%{
+        width: 60%;
+    }
+}
+
+@keyframes c{
+    100%{
+        width: 70%;
+    }
+}
+
+@keyframes hc{
+    100%{
+        width: 90%;
+    }
+}
+
+@keyframes js{
+    100%{
+        width: 75%;
+    }
+}
+
+@keyframes sql{
+    100%{
+        width: 80%;
+    }
+}
+
+/* --------- SOFT SKILLS SECTION ---------- */
+
 
 .soft {
     font-family: 'Julius Sans One', sans-serif;
     font-weight: bold;
-    font-size: 30px;
     margin-bottom: 20px;
 }
 
-.slist{
+.slist h2{
     font-family: 'Poppins', sans-serif;
-    font-weight: 900;
-    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-top: 40px;
+    margin-bottom: 5px;
+    font-size: 15px;
+    text-align: left;
 }
+
+.st {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+  }
+  
+.slist i {
+    color: #CC0000;
+    font-size: 30px;
+    vertical-align: middle;
+  }
