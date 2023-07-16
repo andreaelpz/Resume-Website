@@ -17,8 +17,8 @@
                 Send Me an Email!
             </div>
         
-            <div class = "form">
-                <form action="php/send-email.php" method="post">
+            <div class="form">
+                <form action="{{ url_for('send_email') }}" method="post">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
                     

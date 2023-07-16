@@ -25,3 +25,4 @@ def resume():
 @views.route("/email")
 def email():
     return render_template("email.html")
+
