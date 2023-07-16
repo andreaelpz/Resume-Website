@@ -1,0 +1,18 @@
+.email-input{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.email-input input{
+    margin: 20px;
+}
+
+.email-input button{
+    margin: 20px;
+}
+
+input, textarea{
+    
+}

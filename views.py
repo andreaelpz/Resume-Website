@@ -11,13 +11,17 @@ def desktop():
     return render_template("desktop.html")
 
 @views.route("/about")
-def desktop():
+def about():
     return render_template("about.html")
 
 @views.route("/experience")
-def desktop():
+def experience():
     return render_template("experience.html")
 
 @views.route("/resume")
-def desktop():
+def resume():
     return render_template("resume.html")
+
+@views.route("/email")
+def email():
+    return render_template("email.html")

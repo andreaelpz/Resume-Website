@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Resume</title>
+        <link rel="stylesheet" type="text/css" href="../static/stylesheets/resume.css">
+        <link rel="stylesheet" type="text/css" href="../static/stylesheets/email.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    </head>
+
+    <body>
+        <button type="button" class="close" onclick="closeEmailPopup()">
+            <i class="fas fa-times" style="color: #CC0000;"></i>
+        </button>
+            <div class = "resume">
+                Send Me an Email!
+            </div>
+        
+            <div class = "form">
+                <form action="php/send-email.php" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                    
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+    </body>
+</html>

@@ -7,7 +7,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-image: url('../images/bu.jpeg');
         background-size: cover;
         height: 100%;
         width: 100%;
@@ -25,6 +24,7 @@
         justify-content: center;
         align-items: center;
         overflow: hidden;
+        z-index: 9999;
       }
 
     /* {% comment %} -------------- PICTURE --------------- {% endcomment %} */
@@ -113,8 +113,34 @@
       height: 100px;
       margin-bottom: 30px;
       font-size: 24px;
-      z-index: 3;
+      z-index: -1;
       top: 75px;
+    }
+
+    .email i{
+      cursor: pointer;
+    }
+
+    .empopup {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      top: 7%;
+      left: 66.7%; 
+      /* 66.56 */
+      width: 850px;
+      height: 690px;
+      transform: translateX(-100%);
+      background-color: #fafafa;
+      border: 5px solid #690202;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      animation: slideIn 0.5s forwards;
+      overflow: auto;
+    }
+
+    #emailPopup{
+      z-index: 9999;
     }
 
     #pn{
@@ -165,9 +191,21 @@
         justify-content: space-evenly;
         height: 100vh;
         font-size: 24px;
-        z-index: 3;
         left: 40%;
         text-align: center;
+        z-index: -1;
+    }
+
+    .resume{
+      z-index: -1;
+    }
+
+    .about{
+      z-index: -1;
+    }
+
+    .experience{
+      z-index: -1;
     }
 
     button {
@@ -181,6 +219,7 @@
       background-color: #fafafa;
       cursor: pointer;
       border: 5px solid #690202;
+      z-index: -1;
     }
 
     button i {
@@ -204,6 +243,7 @@
       height: 0;
       overflow: hidden;
       transition: width 0.3s ease, height 0.3s ease;
+      z-index: 3;
     }
     
     #popupContent {

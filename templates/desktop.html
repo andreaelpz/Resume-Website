@@ -6,10 +6,10 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
 </head>
-<body style ="display: flex;
+<body style="display: flex;
 justify-content: center;
 align-items: center;
-background-image: url('../images/bu.jpeg');
+background-image: url('{{ url_for('static', filename='images/bu.jpeg') }}');
 background-size: cover;
 height: 100%;
 width: 100%;
@@ -23,7 +23,7 @@ overflow: hidden;">
             background-color: #fafafa; position: absolute; top: 0; 
             left: 80px; border: 15px solid #690202">
             <div class = "andrea">
-                <img src="../images/andrea.jpg" alt="Andrea Lopez" >
+                <img src= "{{ url_for('static', filename='images/andrea.jpg') }}" alt="Andrea Lopez" >
             </div>
 
             <div class="name" style="font-family: 'Julius Sans One', sans-serif; 
@@ -41,8 +41,11 @@ overflow: hidden;">
             </div>
 
             <div class="links">
-                <div class="email">
+                <div class="email" onclick="openEmailPopup()">
                     <i class="fas fa-solid fa-envelope" style="color: #CC0000;"></i>
+                </div>
+
+                <div id="emailPopup" class="empopup">
                 </div>
 
                 <a href = "https://www.linkedin.com/in/andreael/" target = "_blank">
@@ -66,7 +69,7 @@ overflow: hidden;">
 
     <!-- ////////////////////// END OF LEFT ANDREA SECTION /////////////////////// -->
         <div class = "info">
-            <div class = "about">
+            <div class = "buttons">
                 <button type="button" onclick="openAboutPopup()">
                     <i class="fas fa-user" style="color: #CC0000;"></i>
                     <span>About</span>
@@ -76,7 +79,7 @@ overflow: hidden;">
                 </div>
             </div>
 
-            <div class = "experience">
+            <div class = "buttons">
                 <button type="button" onclick="openExperiencePopup()">
                     <i class="fas fa-briefcase" style="color: #CC0000;"></i>
                     <span>Experience</span>
@@ -86,7 +89,7 @@ overflow: hidden;">
                 </div>
             </div>
 
-            <div class = "resume">
+            <div class = "buttons">
                 <button type="button" onclick="openResumePopup()">
                     <i class="fas fa-file" style="color: #CC0000;"></i>
                     <span>Resume</span>
@@ -114,7 +117,7 @@ overflow: hidden;">
         
         <script>
             function openAboutPopup() {
-                fetch('about.html')
+                fetch('/about')
                   .then(response => response.text())
                   .then(content => {
                     document.getElementById('aboutPopup').innerHTML = content;
@@ -132,7 +135,7 @@ overflow: hidden;">
             }
 
             function openExperiencePopup() {
-                fetch('experience.html')
+                fetch('/experience')
                   .then(response => response.text())
                   .then(content => {
                     document.getElementById('experiencePopup').innerHTML = content;
@@ -150,7 +153,7 @@ overflow: hidden;">
             }
 
             function openResumePopup() {
-                fetch('resume.html')
+                fetch('/resume')
                   .then(response => response.text())
                   .then(content => {
                     document.getElementById('resumePopup').innerHTML = content;
@@ -160,6 +163,24 @@ overflow: hidden;">
             
             function closeResumePopup() {
                 const popup = document.getElementById('resumePopup');
+                popup.style.animation = 'slideOutRight 0.5s forwards';
+                setTimeout(function() {
+                    popup.style.display = 'none';
+                    popup.style.animation = '';
+                }, 500);
+            }
+
+            function openEmailPopup() {
+                fetch('/email')
+                  .then(response => response.text())
+                  .then(content => {
+                    document.getElementById('emailPopup').innerHTML = content;
+                    document.getElementById('emailPopup').style.display = 'block';
+                  });
+              }
+            
+            function closeEmailPopup() {
+                const popup = document.getElementById('emailPopup');
                 popup.style.animation = 'slideOutRight 0.5s forwards';
                 setTimeout(function() {
                     popup.style.display = 'none';

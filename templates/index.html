@@ -31,10 +31,10 @@
         <script> 
             let number = document.getElementById("number");
             let counter = 0;
-            setInterval(() => {
+            let intervalId = setInterval(() => {
                 if(counter == 100){
-                    clearInterval();
-                    window.location.href = "desktop.html";
+                    clearInterval(intervalId);
+                    window.location.href = "/home";
                 }
                 else{
                     counter += 1;
