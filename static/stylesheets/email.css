@@ -1,18 +1,74 @@
-.email-input{
+.form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    border: 5px solid #690202;
+  }
+  
+.who {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    width: 100%;
+    flex-grow: 4;
+}
+
+.minput{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    margin-left: 10px;
+    width: 600px;
+    margin-bottom: 30px;
+    flex-grow: 4;
+}
+
+.winput{
+    margin: 20px;
+}
+
+.input input,
+.input textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #CC0000;
+    border-radius: 0;
+    height: 250px;
+}
+
+.winput input,
+.winput textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #CC0000;
+    border-radius: 0;
+}
+
+input{
+    font-family: "Poppins", sans-serif;
+}
+
+textarea{
+    font-family: "Poppins", sans-serif;
+}
+
+.ibutton {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-}
-
-.email-input input{
     margin: 20px;
+    height: 130px;
 }
 
-.email-input button{
-    margin: 20px;
+.style{
+    height: 70px;
+    width: 200px;
+    border: 2px solid #690202;
 }
 
-input, textarea{
-    
-}
+
+   
