@@ -1,0 +1,57 @@
+$initial-popup-width: 57.5%;
+$temp: $initial-popup-width;
+
+$initial-popup-left: 67.4%;
+$temp_left: $initial-popup-left;
+
+@for $i from 1 through 70 {
+  $calculated-width: $temp - $i * 0.5%;
+  $calculated-left: $temp_left + $i * 0.5%;
+
+  @media (min-width: calc(500px + #{$i * 15px})) and (max-width: calc(1510px - #{$i * 15px})) {
+    .popup {
+        position: fixed;
+        z-index: 1;
+        top: 7%;
+        left: $calculated-left;
+        width: $temp;
+        height: 80%;
+        /*top: 7%;
+        left: 66.7%; ---- 67.4%
+        width: 850px;
+        height: 690px;
+        */
+        transform: translateX(-100%);
+        background-color: #fafafa;
+        border: 5px solid #690202;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        animation: slideIn 0.5s forwards;
+        overflow: auto;
+      }
+  }
+
+  @media (min-width: calc(485px + #{$i * 15px})) and (max-width: calc(1495px - #{$i * 15px})) {
+    .popup {
+        position: fixed;
+        z-index: 1;
+        top: 7%;
+        left: $temp-left;
+        width: $calculated-width;
+        height: 80%;
+        /*top: 7%;
+        left: 66.7%; ---- 67.4%
+        width: 850px;
+        height: 690px;
+        */
+        transform: translateX(-100%);
+        background-color: #fafafa;
+        border: 5px solid #690202;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        animation: slideIn 0.5s forwards;
+        overflow: auto;
+      }
+  }
+}
+

@@ -94,6 +94,11 @@
   justify-content: center;
 }
 
+.h1{
+  text-align: center;
+  font-size: 18px;
+}
+
 .paragraph{
   font-family: "Poppins", sans-serif;
   font-size: 15px;
