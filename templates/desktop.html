@@ -20,90 +20,95 @@ padding: 0;
 overflow: hidden;">
     <!-- this "container" class deals with the left "andrea" section --> 
     <div class="container">
-        <div class = "rectIntro">
-            <div class="rectangle"
-                style="width: 450px; height: 96.75%; z-index: 0; 
-                background-color: #fafafa; position: absolute; top: 0; 
-                left: 80px; border: 15px solid #690202">
-                <div class = "andrea">
-                    <img src= "{{ url_for('static', filename='images/andrea.jpg') }}" alt="Andrea Lopez" >
-                </div>
-
-                <div class="name" style="font-family: 'Julius Sans One', sans-serif; 
-                font-weight: 900; z-index: 2; position: relative; font-size: 40px; 
-                display: flex; justify-content: center; margin-bottom: 15px;";>
-                    Andrea Lopez        
-                </div>
-
-                <div class="description">
-                    <ul class="list">
-                        <li><span>Software Engineer</span></li>
-                        <li><span>Project Manager</span></li>
-                        <li><span>Freelance Web Developer</span></li>
-                    </ul>
-                </div>
-
-                <div class="links">
-                    <div class="email" onclick="openEmailPopup()">
-                        <i class="fas fa-envelope" style="color: #CC0000;"></i>
+        <div class = "center"
+            style = "display: flex; flex-direction: row;
+            gap: 0px; flex-shrink: 1;">
+            <div class = "rectIntro">
+                <div class="rectangle"
+                    style="width: 25%; min-width: 35%; height: 96.75%; z-index: 0; 
+                    background-color: #fafafa; position: absolute; top: 0; 
+                    left: 1.2%; border: 15px solid #690202">
+                    <div class = "andrea">
+                        <img src= "{{ url_for('static', filename='images/andrea.jpg') }}" alt="Andrea Lopez" >
                     </div>
 
-                    <div id="emailPopup" class="empopup">
+                    <div class="name" style="font-family: 'Julius Sans One', sans-serif; 
+                    font-weight: 900; z-index: 2; position: relative; font-size: 40px; 
+                    display: flex; justify-content: center; margin-bottom: 15px;";>
+                        Andrea Lopez        
                     </div>
 
-                    <a href = "https://www.linkedin.com/in/andreael/" target = "_blank">
-                        <div class="linkedin">
-                            <i class="fab fa-linkedin" style="color: #CC0000;"></i>
-                        </div>
-                    </a>
+                    <div class="description">
+                        <ul class="list">
+                            <li><span>Software Engineer</span></li>
+                            <li><span>Project Manager</span></li>
+                            <li><span>Freelance Web Developer</span></li>
+                        </ul>
+                    </div>
 
-                    <a href = "https://github.com/andreaelpz" target = "_blank">
-                        <div class="github">
-                            <i class="fab fa-github" style="color: #CC0000;"></i>
+                    <div class="links">
+                        <div class="email" onclick="openEmailPopup()">
+                            <i class="fas fa-envelope" style="color: #CC0000;"></i>
                         </div>
-                    </a>
 
-                    <div class="phone">
-                        <i class="fas fa-phone fa-flip-horizontal" style="color: #CC0000;"></i>
-                        <span id = "pn" style="font-size:15px; font-weight: 900;"> (956) 400-5439 </span>
+                        <div id="emailPopup" class="empopup">
+                        </div>
+
+                        <a href = "https://www.linkedin.com/in/andreael/" target = "_blank">
+                            <div class="linkedin">
+                                <i class="fab fa-linkedin" style="color: #CC0000;"></i>
+                            </div>
+                        </a>
+
+                        <a href = "https://github.com/andreaelpz" target = "_blank">
+                            <div class="github">
+                                <i class="fab fa-github" style="color: #CC0000;"></i>
+                            </div>
+                        </a>
+
+                        <div class="phone">
+                            <i class="fas fa-phone fa-flip-horizontal" style="color: #CC0000;"></i>
+                            <span id = "pn" style="font-size:15px; font-weight: 900;"> (956) 400-5439 </span>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+
         
 
     <!-- ////////////////////// END OF LEFT ANDREA SECTION /////////////////////// -->
-        <div class = "info">
-            <div class = "buttons">
-                <button type="button" onclick="openAboutPopup()">
-                    <i class="fas fa-user" style="color: #CC0000;"></i>
-                    <span>About</span>
-                </button>
+            <div class = "info">
+                <div class = "buttons">
+                    <button type="button" onclick="openAboutPopup()">
+                        <i class="fas fa-user" style="color: #CC0000;"></i>
+                        <span>About</span>
+                    </button>
 
-                <div id="aboutPopup" class="popup">
+                    <div id="aboutPopup" class="popup">
+                    </div>
                 </div>
-            </div>
 
-            <div class = "buttons">
-                <button type="button" onclick="openExperiencePopup()">
-                    <i class="fas fa-briefcase" style="color: #CC0000;"></i>
-                    <span>Experience</span>
-                </button>
-                
-                <div id="experiencePopup" class="epopup">
+                <div class = "buttons">
+                    <button type="button" onclick="openExperiencePopup()">
+                        <i class="fas fa-briefcase" style="color: #CC0000;"></i>
+                        <span>Experience</span>
+                    </button>
+                    
+                    <div id="experiencePopup" class="epopup">
+                    </div>
                 </div>
-            </div>
 
-            <div class = "buttons">
-                <button type="button" onclick="openResumePopup()">
-                    <i class="fas fa-file" style="color: #CC0000;"></i>
-                    <span>Resume</span>
-                </button>
+                <div class = "buttons">
+                    <button type="button" onclick="openResumePopup()">
+                        <i class="fas fa-file" style="color: #CC0000;"></i>
+                        <span>Resume</span>
+                    </button>
 
-                <div id="resumePopup" class="rpopup">
+                    <div id="resumePopup" class="rpopup">
+                    </div>
                 </div>
-            </div>
 
+            </div>
         </div>
     </div>        
 

@@ -31,11 +31,11 @@
       
     .andrea {
         position: relative;
-        margin-top: 30px;
-        margin-bottom: 30px;
+        margin-top: 5%;
+        margin-bottom: 5%;
         /* top: 30px;
         left: 30px; */
-        height: 70%;   
+        height: 70%;
         display: flex;  
         justify-content: center;
         z-index: 2; 
@@ -140,10 +140,10 @@
     .empopup {
       display: none;
       position: fixed;
-      z-index: 9999;
+      z-index: 1;
       top: 7%;
       left: 67.4%;
-      width: 58%;
+      width: 55%;
       height: 80%;
       transform: translateX(-100%);
       background-color: #fafafa;
@@ -245,22 +245,14 @@
         justify-content: space-evenly;
         height: 100vh;
         font-size: 24px;
-        left: 40%;
+        left: 100%;
         text-align: center;
         z-index: -1;
     }
 
-    /* .resume{
-      z-index: -1;
+    .info .buttons{
+      left: 20%;
     }
-
-    .about{
-      z-index: -1;
-    }
-
-    .experience{
-      z-index: -1;
-    } */
 
     button {
       display: flex;
@@ -320,16 +312,11 @@
     .popup {
       display: none;
       position: fixed;
-      z-index: 1;
+      z-index: 999;
       top: 7%;
       left: 67.4%;
-      width: 58%;
+      width: 55%;
       height: 80%;
-      /*top: 7%;
-      left: 66.7%; 
-      width: 850px;
-      height: 690px;
-      */
       transform: translateX(-100%);
       background-color: #fafafa;
       border: 5px solid #690202;
@@ -369,7 +356,7 @@
       z-index: 1;
       top: 7%;
       left: 67.4%;
-      width: 58%;
+      width: 55%;
       height: 80%;
       transform: translateX(-100%);
       background-color: #fafafa;
@@ -410,7 +397,7 @@
       z-index: 1;
       top: 7%;
       left: 67.4%;
-      width: 58%;
+      width: 55%;
       height: 80%;
       transform: translateX(-100%);
       background-color: #fafafa;
