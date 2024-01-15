@@ -239,19 +239,17 @@
 
     /* buttons */
     .info{
-        position: relative;
+        position: absolute;
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
         height: 100vh;
         font-size: 24px;
-        left: 100%;
+        right: 100px;
+        top: .5%;
         text-align: center;
         z-index: -1;
-    }
-
-    .info .buttons{
-      left: 20%;
+        overflow: none;
     }
 
     button {
