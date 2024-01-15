@@ -6,8 +6,8 @@ app = Flask(__name__)
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 587  # Replace with the appropriate port number
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'andreaalpz1016@gmail.com'
-app.config['MAIL_PASSWORD'] = 'ontzkuhpwsadbkhi'
+app.config['MAIL_USERNAME'] = 'andreaelpz@gmail.com'
+app.config['MAIL_PASSWORD'] = 'xhrb rspo cxwn ffvs'
 
 mail = Mail(app)
 
@@ -19,7 +19,7 @@ def send_email():
     email = request.form['email']
     message = request.form['message']
 
-    msg = Message("New Contact Form Submission", sender=email, recipients=["andreaalpz1016@gmail.com"])
+    msg = Message("New Contact Form Submission", sender=email, recipients=["andreaelpz@gmail.com"])
     msg.body = f"Name: {name}\nEmail: {email}\nMessage: {message}"
 
     mail.send(msg)
