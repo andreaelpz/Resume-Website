@@ -18,7 +18,7 @@
 
 .minput{
     position: relative;
-    width: 70%;
+    width: 75%;
     margin-bottom: 30px;
 }
 
@@ -29,7 +29,6 @@
 .input input,
 .input textarea {
     width: 100%;
-    padding: 10px;
     border: 2px solid #CC0000;
     border-radius: 0;
     height: 250px;
@@ -38,7 +37,6 @@
 .winput input,
 .winput textarea {
     width: 100%;
-    padding: 10px;
     border: 2px solid #CC0000;
     border-radius: 0;
 }

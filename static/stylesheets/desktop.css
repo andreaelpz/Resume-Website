@@ -10,8 +10,8 @@
         background-size: cover;
         height: 100%;
         width: 100%;
-        margin: 0;
-        padding: 0;
+        margin-top: 0;
+        padding-top: 0;
         overflow: hidden;
       }
 
@@ -37,7 +37,7 @@
         width: 25%;
         min-width: 35%;
         height: 96.75%;
-        z-index: 999;
+        z-index: 999999;
         background-color: #fafafa;
         position: absolute;
         top: 0;
@@ -49,6 +49,7 @@
       
     .andrea {
         position: relative;
+        background-image: url('/static/images/andrea.jpg');
         margin-top: 5%;
         margin-bottom: 5%;
         /* top: 30px;
@@ -57,6 +58,8 @@
         display: flex;  
         justify-content: center;
         z-index: 2; 
+        background-size: cover;
+        margin: 20px;
     }
 
     /* {% comment %} ------------------- TEXT TYPING ANIMATION -------------------- {% endcomment %} */
@@ -159,7 +162,7 @@
     .empopup {
       display: none;
       position: fixed;
-      z-index: 1;
+      z-index: -1;
       top: 7%;
       left: 67.4%;
       width: 55%;
@@ -171,10 +174,6 @@
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
       animation: slideIn 0.5s forwards;
       overflow: auto;
-    }
-
-    #emailPopup{
-      z-index: 9999;
     }
 
     .linkedin i:hover{
@@ -443,12 +442,12 @@
         transform: translateX(100%);
       }
     }
-      
-    @media only screen and (max-width: 1060px) {
-      /* Styles for medium-sized screens */
+
+    @media only screen and (min-width:641px) and (max-width:1060px){
       .body{
-        overflow: scroll;
-        margin-bottom: 50px;
+        overflow: visible;
+        padding-bottom: 200px;
+        height:100%;
       }
 
       .container {
@@ -462,7 +461,7 @@
 
       .rectangle{
           width: 75%;
-          left: 11.5%;
+          left: 8%;
           margin: 0 auto;
       }
 
@@ -476,23 +475,24 @@
         height: 50vh;
         gap: 20px;
         right: 25%;
+        padding-bottom: 250px;
       }
 
       .popup{
-        left: 20%;
+        left: 17.5%;
 
       }
 
       .epopup{
-        left: 20%;
+        left: 17.5%;
       }
 
       .empopup{
-        left: 20%;
+        left: 17.5%;
       }
 
       .rpopup{
-        left: 20%;
+        left: 17.5%;
       }
 
       @keyframes slideIn {
@@ -500,7 +500,80 @@
           transform: translateY(50%);
         }
         100% {
-          transform: translateY(32%);
+          transform: translateY(7%);
+        }
+      }
+  
+      @keyframes slideOutRight {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(100%);
+        }
+      }
+    }
+
+
+    @media only screen and (max-width: 640px) {
+      /* Styles for medium-sized screens */
+      .body{
+        overflow: visible;
+        height: 100%;
+        padding-bottom: 200px;
+      }
+
+      .container {
+        overflow: scroll;
+      }
+
+      .center{
+          display:flex;
+          flex-direction: column;
+      }
+
+      .rectangle{
+          width: 75%;
+          left: 8%;
+          margin: 0 auto;
+      }
+
+      .info{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 50%;
+        top: 105%;
+        flex-wrap: wrap;
+        height: 50vh;
+        gap: 20px;
+        right: 25%;
+        padding-bottom: 250px;
+      }
+
+      .popup{
+        left: 17.5%;
+
+      }
+
+      .epopup{
+        left: 17.5%;
+      }
+
+      .empopup{
+        left: 17.5%;
+      }
+
+      .rpopup{
+        left: 17.5%;
+      }
+
+      @keyframes slideIn {
+        0%{
+          transform: translateY(50%);
+        }
+        100% {
+          transform: translateY(7%);
         }
       }
   

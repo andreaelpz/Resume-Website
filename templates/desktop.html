@@ -16,7 +16,7 @@
             <div class = "rectIntro">
                 <div class="rectangle">
                     <div class = "andrea">
-                        <img src= "{{ url_for('static', filename='images/andrea.jpg') }}" alt="Andrea Lopez" >
+                        
                     </div>
 
                     <div class="name" style="font-family: 'Julius Sans One', sans-serif; 
@@ -113,6 +113,28 @@
 
         
         <script>
+
+            const imgElement = document.createElement('img');
+    
+            // Define the source URLs for different page sizes
+            const andreaPic = '/static/images/andrea.jpg';
+            const andrea2Pic = '/static/images/andrea2.jpg';
+
+            // Function to update the image source based on the window size
+            function updateImageSource() {
+            const windowWidth = window.innerWidth;
+
+            if (windowWidth > 700 && windowWidth <= 1059) {
+                imgElement.src = andrea2Pic;
+            } else {
+                imgElement.src = andreaPic;
+            }
+            }
+
+            // Initial update and attach the event listener for window resize
+            updateImageSource();
+            window.addEventListener('resize', updateImageSource);
+
             function openAboutPopup() {
                 fetch('/about')
                   .then(response => response.text())
