@@ -8,26 +8,13 @@
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
-<body style="display: flex;
-justify-content: center;
-align-items: center;
-background-image: url('{{ url_for('static', filename='images/bu.jpeg') }}');
-background-size: cover;
-height: 100%;
-width: 100%;
-margin: 0;
-padding: 0;
-overflow: hidden;">
+<body style="background-image: url('{{ url_for('static', filename='images/bu.jpeg') }}');
+">
     <!-- this "container" class deals with the left "andrea" section --> 
     <div class="container">
-        <div class = "center"
-            style = "display: flex; flex-direction: row;
-            flex-shrink: 1;">
+        <div class = "center">
             <div class = "rectIntro">
-                <div class="rectangle"
-                    style="width: 25%; min-width: 35%; height: 96.75%; z-index: 0; 
-                    background-color: #fafafa; position: absolute; top: 0; 
-                    left: 1.2%; border: 15px solid #690202">
+                <div class="rectangle">
                     <div class = "andrea">
                         <img src= "{{ url_for('static', filename='images/andrea.jpg') }}" alt="Andrea Lopez" >
                     </div>

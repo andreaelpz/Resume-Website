@@ -27,6 +27,24 @@
         z-index: 9999;
       }
 
+    .center{
+        display:flex;
+        flex-direction: row;
+        flex-shrink: 1;
+    }
+
+    .rectangle{
+        width: 25%;
+        min-width: 35%;
+        height: 96.75%;
+        z-index: 999;
+        background-color: #fafafa;
+        position: absolute;
+        top: 0;
+        left: 1.2%;
+        border: 15px solid #690202;
+    }
+
     /* {% comment %} -------------- PICTURE --------------- {% endcomment %} */
       
     .andrea {
@@ -81,6 +99,7 @@
 
     .list li {
         position: relative;
+        z-index: -1;
     }
 
     .list li::after{
@@ -424,19 +443,73 @@
         transform: translateX(100%);
       }
     }
-    /* .modal{
-      padding: 1em;
-      max-width: 50ch;
-    }
-
-    .modal > * {
-        margin: 0 0 0.25em 0;
-    } */
-
-
       
-    @media (max-width: 768px) {
-      .body {
+    @media only screen and (max-width: 1060px) {
+      /* Styles for medium-sized screens */
+      .body{
         overflow: scroll;
+        margin-bottom: 50px;
+      }
+
+      .container {
+        overflow: scroll;
+      }
+
+      .center{
+          display:flex;
+          flex-direction: column;
+      }
+
+      .rectangle{
+          width: 75%;
+          left: 11.5%;
+          margin: 0 auto;
+      }
+
+      .info{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 50%;
+        top: 105%;
+        flex-wrap: wrap;
+        height: 50vh;
+        gap: 20px;
+        right: 25%;
+      }
+
+      .popup{
+        left: 20%;
+
+      }
+
+      .epopup{
+        left: 20%;
+      }
+
+      .empopup{
+        left: 20%;
+      }
+
+      .rpopup{
+        left: 20%;
+      }
+
+      @keyframes slideIn {
+        0%{
+          transform: translateY(50%);
+        }
+        100% {
+          transform: translateY(32%);
+        }
+      }
+  
+      @keyframes slideOutRight {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(100%);
+        }
       }
     }
