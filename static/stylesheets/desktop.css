@@ -190,6 +190,7 @@
       visibility: hidden;
       opacity: 0;
       transition: opacity 0.5s ease;
+      z-index: 999;
     }
 
     #pn::before{

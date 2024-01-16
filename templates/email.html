@@ -18,30 +18,34 @@
             </div>
         
             <div class="form">
-                <form action="{{ url_for('send_email') }}" method="post">
-                    <div class = "who">
-                        <div class="winput">
-                            <input type="text" id="name" name="name" placeholder="Full Name" required style="margin-bottom: 10px;">
-                        </div>
-
-                        <div class = "winput">
-                            <input type="email" id="email" name="email" placeholder="Email Address" required style="margin-bottom: 10px;">
-                        </div>
+                <div class="who">
+                    <div class="winput">
+                        <input type="text" id="name" name="name" placeholder="Full Name" required style="margin-bottom: 10px;">
                     </div>
-
-                    <div class = "minput">
-                        <div class = "input">
-                            <textarea id="message" name="message" placeholder="Message" required style="margin-bottom: 10px;"></textarea>
-                        </div>
+            
+                    <div class="winput">
+                        <input type="email" id="email" name="email" placeholder="Email Address" required style="margin-bottom: 10px;">
                     </div>
-
-                    <div = class="ibutton">
-                        <button class = "style" type="submit">
-                            <i class="fas fa-share" style="color: #CC0000; font-size: 20px;"></i>
-                            <span class = "text" style = "font-size: 16px;">Send</span>
-                        </button>
+                </div>
+            
+                <div class="minput">
+                    <div class="input">
+                        <textarea id="message" name="message" placeholder="Message" required style="margin-bottom: 10px;"></textarea>
                     </div>
-                </form>
+                </div>
+            
+                <div class="ibutton">
+                    <button class="style" type="button" onclick="submitForm()">
+                        <i class="fas fa-share" style="color: #CC0000; font-size: 20px;"></i>
+                        <span class="text" style="font-size: 16px;">Send</span>
+                    </button>
+                    <div class="popup" id="popup">
+                        <img src="{{ url_for('static', filename='images/tick.png') }}">
+                        <h2> Thank you! </h2>
+                        <p> Your email has been sent successfully. Thanks for reaching out! </p>
+                        <button class = "ok" type="button" onclick="closeEmailPopup()"> OK </button>
+                    </div>
+                </div>
             </div>
 
     </body>
