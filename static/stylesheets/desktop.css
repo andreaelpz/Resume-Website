@@ -24,7 +24,6 @@
         justify-content: center;
         align-items: center;
         overflow: hidden;
-        z-index: 9999;
       }
 
     .center{
@@ -37,12 +36,12 @@
         width: 25%;
         min-width: 35%;
         height: 96.75%;
-        z-index: 999999;
         background-color: #fafafa;
         position: absolute;
         top: 0;
         left: 1.2%;
         border: 15px solid #690202;
+        z-index: 999;
     }
 
     /* {% comment %} -------------- PICTURE --------------- {% endcomment %} */
@@ -57,7 +56,6 @@
         height: 70%;
         display: flex;  
         justify-content: center;
-        z-index: 2; 
         background-size: cover;
         margin: 20px;
     }
@@ -66,7 +64,6 @@
     .description {
         display: flex;
         justify-content: center;
-        z-index: 2;
         position: absolute;
         /* top: 570px; */
         left: -20px; 
@@ -102,7 +99,6 @@
 
     .list li {
         position: relative;
-        z-index: -1;
     }
 
     .list li::after{
@@ -135,7 +131,6 @@
       height: 100px;
       margin-bottom: 30px;
       font-size: 24px;
-      z-index: -1;
       top: 75px;
     }
 
@@ -162,9 +157,9 @@
     .empopup {
       display: none;
       position: fixed;
-      z-index: -1;
       top: 7%;
-      left: 67.4%;
+      z-index: 999;
+      left: 67.6%;
       width: 55%;
       height: 80%;
       transform: translateX(-100%);
@@ -208,7 +203,6 @@
       visibility: hidden;
       opacity: 0;
       transition: opacity 0.5s ease;
-      z-index: 999;
     }
 
     #pn::before{
@@ -230,7 +224,6 @@
       bottom:calc(100% + 7px);
       visibility: visible;
       opacity: 1;
-      z-index: 999;
       cursor:  pointer;
       background-color: rgb(234, 215, 215);
     }
@@ -267,7 +260,6 @@
         right: 100px;
         top: .5%;
         text-align: center;
-        z-index: -1;
         overflow: none;
     }
 
@@ -329,7 +321,6 @@
     .popup {
       display: none;
       position: fixed;
-      z-index: 999;
       top: 7%;
       left: 67.4%;
       width: 55%;
@@ -341,6 +332,7 @@
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
       animation: slideIn 0.5s forwards;
       overflow: auto;
+      z-index: 2;
     }
 
     @keyframes slideIn {
@@ -370,7 +362,6 @@
     .epopup {
       display: none;
       position: fixed;
-      z-index: 1;
       top: 7%;
       left: 67.4%;
       width: 55%;
@@ -381,6 +372,7 @@
       padding: 20px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
       animation: slideIn 0.5s forwards;
+      z-index: 2;
       overflow: auto;
     }
 
@@ -411,7 +403,6 @@
     .rpopup {
       display: none;
       position: fixed;
-      z-index: 1;
       top: 7%;
       left: 67.4%;
       width: 55%;
@@ -422,6 +413,7 @@
       padding: 20px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
       animation: slideIn 0.5s forwards;
+      z-index: 2;
       overflow: auto;
     }
 
@@ -475,6 +467,7 @@
         height: 50vh;
         gap: 20px;
         right: 25%;
+        z-index: 1;
         padding-bottom: 250px;
       }
 

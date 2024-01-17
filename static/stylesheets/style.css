@@ -60,7 +60,7 @@ circle{
     stroke-dasharray: 472;
     /* part of array that is hidden */
     stroke-dashoffset: 472; 
-    animation: anim 2s linear forwards;
+    animation: anim 2.1s linear forwards;
 }
 
 svg{
