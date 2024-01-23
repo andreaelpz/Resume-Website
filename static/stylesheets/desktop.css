@@ -629,7 +629,7 @@
       .empopup{
         left: 12%;
         width: 65%;
-        overflow: scroll;
+        top: 10%;
       }
 
       .rpopup{
