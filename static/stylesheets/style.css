@@ -74,3 +74,9 @@ svg{
         stroke-dashoffset: 0;
     }
 }
+
+@media only screen and (max-width: 507px){
+    circle{
+        animation: anim 3.5s linear forwards;
+    }
+}
