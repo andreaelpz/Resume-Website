@@ -508,7 +508,7 @@
     }
 
 
-    @media only screen and (max-width: 640px) {
+    @media only screen and (min-width:508px) and (max-width: 640px) {
       /* Styles for medium-sized screens */
       .body{
         overflow: visible;
@@ -559,6 +559,81 @@
 
       .rpopup{
         left: 17.5%;
+      }
+
+      @keyframes slideIn {
+        0%{
+          transform: translateY(50%);
+        }
+        100% {
+          transform: translateY(7%);
+        }
+      }
+  
+      @keyframes slideOutRight {
+        0% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(100%);
+        }
+      }
+    }
+
+    @media only screen and (max-width: 507px) {
+      /* Styles for small screens */
+      .body{
+        overflow: visible;
+        height: 100%;
+        padding-bottom: 200px;
+      }
+
+      .container {
+        overflow: scroll;
+      }
+
+      .center{
+          display:flex;
+          flex-direction: column;
+      }
+
+      .rectangle{
+          width: 90%;
+          margin: 0 auto;
+      }
+
+      .info{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 50%;
+        top: 105%;
+        flex-wrap: wrap;
+        height: 50vh;
+        gap: 20px;
+        right: 25%;
+        padding-bottom: 250px;
+      }
+
+      .popup{
+        left: 12%;
+        width: 65%;
+
+      }
+
+      .epopup{
+        left: 12%;
+        width: 65%;
+      }
+
+      .empopup{
+        left: 12%;
+        width: 65%;
+      }
+
+      .rpopup{
+        left: 12%;
+        width: 65%;
       }
 
       @keyframes slideIn {
